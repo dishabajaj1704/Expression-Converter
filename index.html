@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infix-Postfix Connverter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="basic_style.css">
+</head>
+
+<body>
+    <section>
+        <nav>
+
+            <ul>
+                <li id="logo">
+                    <img id="logo" src="images/logo.png" alt="">
+                </li>
+                <li>
+                    <a href="#">Expression Converter</a>
+                </li>
+                <li id="home">
+                    <a href="#">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section class="main bg-black m-20">
+        <div class="container p-10">
+            <div id="note" class="m-t-10 p-10 text-center">
+                <p><span>Note:</span>Do not use spaces in expression. A+B/C or 4+5/3 not A + B / C or 4 + 5 / 3
+                </p>
+            </div>
+            <h3 class="text-center m-t-30">Infix to Postfix & Prefix Converter</h3>
+            <p class="text-center m-t-30">Enter the Infix expression below in box and press Convert </p>
+
+            <div class="m-t-40 text-center">
+                <div id="infix">
+                    <input type="text" id="inputf" class="text-center display-block" autocomplete="off">
+                </div>
+
+                <div class="m-t-20">
+                    <input type="radio" id="postfix_rb" name="expression" checked>
+                    <Label>Postfix </Label>
+
+                    <input type="radio" id="prefix_rb" name="expression">
+                    <Label>Prefix </Label>
+                </div>
+
+                <a href="#" id="convert" class="btn btn-light m-t-30">Convert</a>
+
+            </div>
+
+            <div class="color-light text-center">
+                <h4 id="postfix_ans"></h4>
+                <h4 id="prefix_ans" class=""></h4>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+<script src="Infix-Postfix.js"></script>
+
+</html>
