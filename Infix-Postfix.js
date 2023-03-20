@@ -33,23 +33,28 @@ convert.addEventListener('click', showAns)
 
 function showAns(evt) {
     inputf = document.getElementById('inputf').value;
-    infix_Array = [...inputf];
-    const inputLength = infix_Array.length
-    items = Array(inputLength).fill(0);
-    postfix = Array(inputLength).fill(0);
-    if (postfix_rb.checked) {
-        console.log(infix_Array)
+    if (inputf == "") {
+        window.alert("TextField is empty!");
+    } else {
+        infix_Array = [...inputf];
+        const inputLength = infix_Array.length
+        items = Array(inputLength).fill(0);
+        postfix = Array(inputLength).fill(0);
+        if (postfix_rb.checked) {
+            console.log(infix_Array)
 
-        infixToPostFix();
-        console.log(postfix);
-        postfix = postfix.slice(0, showIndexTill);
-        postfix = postfix.join("")
-        postfix_ans.setAttribute('class', 'ans');
-        postfix_ans.innerHTML = "Postfix Expression: " + postfix;
-        console.log(items);
+            infixToPostFix();
+            console.log(postfix);
+            postfix = postfix.slice(0, showIndexTill);
+            postfix = postfix.join("")
+            postfix_ans.setAttribute('class', 'ans');
+            postfix_ans.innerHTML = "Postfix Expression: " + postfix;
+            console.log(items);
+        }
+
 
     }
-    else if (prefix_rb.checked) {
+    if (prefix_rb.checked) {
         let q = 0;
         var reversedArray = infix_Array.reverse();
         for (let i = 0; i < reversedArray.length; i++) {

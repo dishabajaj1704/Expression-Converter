@@ -7,7 +7,7 @@
 .container {
     width: 70%;
     margin: 0 auto;
-    height: 38rem;
+    height: 40rem;
 }
 
 ul {
@@ -81,4 +81,9 @@ input[type=radio] {
     width: auto;
     border-radius: 10px;
     margin-top: 30px;
+}
+
+.heading {
+    font-size: 1.5rem;
+    text-align: center;
 }
